@@ -11,7 +11,10 @@ $(function(){
     });
     //execute that request
     request.execute(function(response){
-      console.log(response);
+      var results = response.result;
+      $.each(results.items, function(index, item){
+        console.log(item);
+      });
     });
   });
 });
