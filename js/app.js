@@ -12,7 +12,10 @@ $(function(){
       type: "video",
       q: encodeURIComponent($("#search").val()).replace(/%20/g, "+"),
       maxResults: 5,
-      order: "viewCount",
+      order: "relevance",
+      type: "video",
+      safeSearch: "none",
+      topicId: "/m/01k8wb",
     });
     //execute that request
     request.execute(function(response) {
