@@ -14,7 +14,7 @@ $(function(){
           var results = response.result;
           $("#results").html("");
           $.each(results.items, function(index, item) {
-            $.get("tpl/item.html", function(data) {
+            $.get("item.html", function(data) {
                 $("#results").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
             });
           });
