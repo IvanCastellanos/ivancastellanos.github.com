@@ -13,7 +13,6 @@ $(function(){
       q: encodeURIComponent($("#search").val()).replace(/%20/g, "+"),
       maxResults: 5,
       order: "relevance",
-      type: "video",
       safeSearch: "none",
       topicId: "/m/01k8wb",
     });
