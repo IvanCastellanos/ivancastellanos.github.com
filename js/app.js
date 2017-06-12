@@ -1,4 +1,4 @@
-function tplawesome(e,t){res=e;for(var n=0;n<t.length;n++){res=res.replace(/\{\{(.*?)\}\}/g,function(e,r){return t[n][r]})}return res}
+function tpl(e,t){res=e;for(var n=0;n<t.length;n++){res=res.replace(/\{\{(.*?)\}\}/g,function(e,r){return t[n][r]})}return res}
 
 $(function(){
   $("form").on("submit", function(e){
@@ -17,7 +17,7 @@ $(function(){
           $("#results").html("");
           $.each(results.items, function(index, item) {
             $.get("tpl/item.html", function(data) {
-                $("#results").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
+                $("#results").append(tpl(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
             });
           });
           resetVideoHeight();
