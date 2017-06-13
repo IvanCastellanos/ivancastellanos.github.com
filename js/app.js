@@ -11,7 +11,7 @@ $(function(){
       part: "snippet",
       type: "video",
       q: encodeURIComponent($("#search").val()).replace(/%20/g, "+"),
-      maxResults: 5,
+      maxResults: 10,
       order: "relevance",
       safeSearch: "none",
       topicId: "/m/01k8wb",
@@ -28,6 +28,32 @@ $(function(){
           resetVideoHeight();
        });
     });
+
+    $("#lectures").on("click", function(e){
+      e.preventDefault();
+      // prepare the request
+      var request = gapi.client.youtube.search.list({
+        part: "snippet",
+        type: "video",
+        q: encodeURIComponent($("#search").val() + "lecture").replace(/%20/g, "+"),
+        maxResults: 10,
+        order: "relevance",
+        safeSearch: "none",
+        topicId: "/m/01k8wb",
+        videoDuration: "long",
+      });
+      //execute that request
+      request.execute(function(response) {
+            var results = response.result;
+            $("#results").html("");
+            $.each(results.items, function(index, item) {
+              $.get("tpl/item.html", function(data) {
+                  $("#results").append(tpl(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
+              });
+            });
+            resetVideoHeight();
+         });
+      });
 
     $(window).on("resize", resetVideoHeight);
 });
