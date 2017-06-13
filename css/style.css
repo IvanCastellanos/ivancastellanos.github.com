@@ -1,3 +1,30 @@
 body{
   background-color: #FFF;
 }
+
+#search{
+  height: 74px;
+  width: 700px;
+  font-size: 1.8em;
+  color: #f59e92;
+  padding: 0em 1em;
+  border-radius: 5px;
+  border: 0px;
+}
+
+.format__types{
+
+}
+
+.format__types li{
+  display: inline-block;
+}
+
+
+
+
+
+
+.item{
+  font-size: 1.8em;
+}
