@@ -25,6 +25,7 @@ body{
 .format__types{
   background: #fff;
   border-radius: 5px 5px 0em 0em;
+  text-align: center;
   padding: 0.8em 0em;
 }
 
@@ -32,6 +33,11 @@ body{
   display: inline-block;
   color: #6e3e5f;
   font-size: 1.3em;
+}
+
+.type_item{
+  border-bottom: 2px solid red;
+  margin: 0em 0.5em;
 }
 
 
