@@ -47,5 +47,17 @@ body{
 
 .item{
   font-size: 1.9em;
-  color: #79c3a2
+  color: #79c3a2;
+}
+
+.item-wrapper:hover{
+  background-color: #edf7f3;
+}
+
+.item-top{
+  cursor: pointer;
+}
+
+.item-bottom{
+  display: none;
 }
