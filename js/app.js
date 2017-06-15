@@ -4,7 +4,7 @@ function tpl(e,t){res=e;for(var n=0;n<t.length;n++){res=res.replace(/\{\{(.*?)\}
 
 $(document).ready(function(){
     $(".item-top").click(function(){
-        $(".item-bottom").css("display", "block");
+        $(".item-bottom").toggle();
     });
 });
 
