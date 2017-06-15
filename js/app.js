@@ -2,14 +2,18 @@
 
 function tpl(e,t){res=e;for(var n=0;n<t.length;n++){res=res.replace(/\{\{(.*?)\}\}/g,function(e,r){return t[n][r]})}return res}
 
-$(document).ready(function(){
-    $(".item-top").click(function(){
-        $(".item-bottom").toggle();
-    });
-});
+// $(document).ready(function(){
+//     $(".item-top").click(function(){
+//         $(".item-bottom").toggle();
+//     });
+// });
 
 $(function(){
   //check form
+  $(".item-top").click(function(){
+      $(".item-bottom").toggle();
+  });
+
   $("form").on("submit", function(e){
     e.preventDefault();
     // prepare the request
