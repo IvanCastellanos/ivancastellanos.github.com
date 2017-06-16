@@ -10,9 +10,6 @@ function tpl(e,t){res=e;for(var n=0;n<t.length;n++){res=res.replace(/\{\{(.*?)\}
 
 $(function(){
   //check form
-  $(".item-top").click(function(){
-      $(".item-bottom").toggle();
-  });
 
   $("form").on("submit", function(e){
     e.preventDefault();
@@ -33,7 +30,7 @@ $(function(){
           $.each(results.items, function(index, item) {
             $.get("tpl/item.html", function(data) {
                 $("#results").append(tpl(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
-                $(".item-bottom").html(`<iframe class="video w100" width="640" height="360" src="//www.youtube.com/embed/${videoid}" frameborder="0" allowfullscreen></iframe>`);
+                $(".item-bottom").html(`<iframe class="video w100" width="640" height="360" src="//www.youtube.com/embed/${item.id.videoId}" frameborder="0" allowfullscreen></iframe>`);
             });
           });
           resetVideoHeight();
