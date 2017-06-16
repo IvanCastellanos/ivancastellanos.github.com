@@ -59,5 +59,16 @@ body{
 }
 
 .item-bottom{
-  display: none;
+
+}
+
+.rating-section{
+  text-align: center;
+}
+
+.rating-ul{
+}
+
+.rating-ul li{
+  display: inline-block;
 }
