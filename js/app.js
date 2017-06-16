@@ -33,6 +33,7 @@ $(function(){
           $.each(results.items, function(index, item) {
             $.get("tpl/item.html", function(data) {
                 $("#results").append(tpl(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
+                $(".item-bottom").html('<iframe class="video w100" width="640" height="360" src="//www.youtube.com/embed/{{videoid}}" frameborder="0" allowfullscreen></iframe>');
             });
           });
           resetVideoHeight();
