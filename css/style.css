@@ -53,6 +53,48 @@ body{
 }
 
 
+.quick-comment{
+  margin-left: 1em;
+
+  font-size: 0.7em;
+  font-weight: 200;
+  color: #bababa;
+  display: inline-block;
+
+  border-radius: 5px;
+  border: 1px solid #bababa;
+  background: #fff;
+  padding: 0.4em 1.1em;
+
+  animation-duration: 1.2s;
+  transform-origin: top left;
+  transform-style: preserve-3D;
+  transform: rotate(-90deg);
+  opacity: 0;
+}
+
+.quick-comment-rotate{
+  animation-name: quick-comment-animation;
+}
+
+@keyframes quick-comment-animation {
+  0%{
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+  20%{
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  80%{
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100%{
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+}
 
 
 
@@ -60,10 +102,6 @@ body{
 .item{
   font-size: 1.6em;
   color: #79c3a2;
-}
-
-.item-wrapper:hover{
-  background-color: #edf7f3;
 }
 
 .item-top{

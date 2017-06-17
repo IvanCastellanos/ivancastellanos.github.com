@@ -2,11 +2,12 @@
 
 function tpl(e,t){res=e;for(var n=0;n<t.length;n++){res=res.replace(/\{\{(.*?)\}\}/g,function(e,r){return t[n][r]})}return res}
 
-// $(document).ready(function(){
-//     $(".item-top").click(function(){
-//         $(".item-bottom").toggle();
-//     });
-// });
+$(document).ready(function(){
+    $(".item-top").mouseenter(function(){
+        $(".quick-comment").addClass("quick-comment-rotate");
+        console.log("mouse enter");
+    });
+});
 
 $(function(){
   //check form
