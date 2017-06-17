@@ -35,7 +35,7 @@ body{
 }
 
 #results{
-  padding: 4em 0em;
+  padding: 2em 0em;
 }
 
 .format__types{
@@ -68,6 +68,7 @@ body{
 
 .item-top{
   cursor: pointer;
+  padding: 2em 0em;
 }
 
 .item-bottom{
