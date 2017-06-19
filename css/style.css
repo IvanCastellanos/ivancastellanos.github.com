@@ -118,8 +118,13 @@ body{
 }
 
 .rating-ul{
+
 }
 
 .rating-ul li{
   display: inline-block;
+}
+
+.rating__emoticon{
+  width: 60px;
 }
