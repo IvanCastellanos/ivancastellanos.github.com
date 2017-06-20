@@ -4,19 +4,6 @@ function tpl(e,t){res=e;for(var n=0;n<t.length;n++){res=res.replace(/\{\{(.*?)\}
 
 
 $(function(){
-  $(".item-top").click(function(){
-    $(this).next(".item-bottom").slideToggle("slow");
-  });
-
-
-
-  $(".item-top").mouseenter(function(){
-      $(".quick-comment").addClass("quick-comment-rotate");
-  });
-
-  $(".item-top").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",function(){
-    $(".quick-comment").removeClass('quick-comment-rotate');
-  });
 
   //check form
 
