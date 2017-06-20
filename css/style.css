@@ -111,6 +111,7 @@ body{
 
 .item-bottom{
   text-align: center;
+  display: none;
 }
 
 .rating-section{
