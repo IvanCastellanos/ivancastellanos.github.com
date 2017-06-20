@@ -1,4 +1,4 @@
-$(document).redy(function(){
+$(document).ready(function(){
   $(".item-top").click(function(){
     $(this).next(".item-bottom").slideToggle("slow");
   });
